@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.inc.game.memoryTestGame.user_input">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg1"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingBottom="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+            android:background="#80000000"
+            android:fontFamily="sans-serif-thin"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:textColor="#7bfaff"
+        android:textSize="20sp"
+        android:text="Enter Words Seperated by Space :"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+        <EditText
+            android:id="@+id/userInput"
+            android:digits="abcdefghijklmnopqrstuvwxyz "
+            android:textColor="#ffffff"
+            android:background="@layout/rounded_border_edittext"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="68dp"
+            android:inputType="textAutoCorrect|textMultiLine"
+            android:gravity="center">
+        <requestFocus />
+        </EditText>
+        </LinearLayout>
+        <Button
+        android:id="@+id/submittBtn"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="275dp"
+        android:text="Submit"
+        android:onClick="submittButtonFunction"
+            android:background="@drawable/button_bg"
+        android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
